@@ -55,6 +55,7 @@ class Main extends PluginBase implements Listener{
                             $event->setCancelled(true);
                         }
                     }
+                }
                         
                         public function onDeath(PlayerDeathEvent $event){
                             $cause = $event->getEntity()->getLastDamageCause();
@@ -68,6 +69,5 @@ class Main extends PluginBase implements Listener{
                                 }
                             }
                         }
-                }
         }
 }
