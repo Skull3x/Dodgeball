@@ -5,7 +5,7 @@
 */
 
 
-namespace DodgeBall;
+namespace Dodgeball;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
