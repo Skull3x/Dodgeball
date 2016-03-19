@@ -48,15 +48,14 @@ class Main extends PluginBase implements Listener{
                     $event->setCancelled(true);
                 }
             }
-                
-                public function onBreak(BlockBreakEvent $event) {
-                    if(!($player->isOp)) {
-                        if($player->getLevel()->getName() === "DodgeBall" && $player->getLevel()->getName() === "Kwa's Plot Spawn") {
-                            $event->setCancelled(true);
-                        }
+            
+            public function onBreak(BlockBreakEvent $event) {
+                if(!($player->isOp)) {
+                    if($player->getLevel()->getName() === "DodgeBall" && $player->getLevel()->getName() === "Kwa's Plot Spawn") {
+                        $event->setCancelled(true);
                     }
                 }
-                        
+            }
                         public function onDeath(PlayerDeathEvent $event){
                             $cause = $event->getEntity()->getLastDamageCause();
                             if($cause instanceof EntityDamageByEntityEvent){
