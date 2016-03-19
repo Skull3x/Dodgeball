@@ -39,6 +39,7 @@ class Main extends PluginBase implements Listener{
             $event->getServer()->getLevel()->broadcastMessage(TextFormat::AQUA . "> " . TextFormat::RED . $name . TextFormat::YELLOW . " has been eliminated in DodgeBall!");
             $event->getEntity()->setHealth(0);
         }
+    }
         
         public function onPlace(BlockPlaceEvent $event) {
             $player = $event->getPlayer();
@@ -46,12 +47,14 @@ class Main extends PluginBase implements Listener{
                 if($player->getLevel()->getName() === "DodgeBall" && $player->getLevel()->getName() === "Kwa's Plot Spawn") {
                     $event->setCancelled(true);
                 }
+            }
                 
                 public function onBreak(BlockBreakEvent $event) {
                     if(!($player->isOp)) {
                         if($player->getLevel()->getName() === "DodgeBall" && $player->getLevel()->getName() === "Kwa's Plot Spawn") {
                             $event->setCancelled(true);
                         }
+                    }
                         
                         public function onDeath(PlayerDeathEvent $event){
                             $cause = $event->getEntity()->getLastDamageCause();
@@ -65,9 +68,6 @@ class Main extends PluginBase implements Listener{
                                 }
                             }
                         }
-                    }
                 }
-            }
         }
-    }
 }
